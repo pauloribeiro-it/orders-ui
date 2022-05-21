@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { NavBarRoutingModule } from './nav-bar-routing.module';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RouterModule } from '@angular/router';
-import { TabViewModule } from 'primeng/tabview';
+import { TabMenuModule } from 'primeng/tabmenu';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 @NgModule({
   declarations: [
     NavBarComponent
@@ -13,7 +14,8 @@ import { TabViewModule } from 'primeng/tabview';
     CommonModule,
     NavBarRoutingModule,
     RouterModule,
-    TabViewModule
+    TabMenuModule,
+    InputTextareaModule
   ],
   exports: [
     NavBarComponent

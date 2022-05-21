@@ -8,26 +8,15 @@ import { MenuItem } from 'primeng/api';
 })
 export class NavBarComponent implements OnInit {
 
-  navLinks: any[];
   items: MenuItem[];
 
   constructor() {
     this.items = [
-      {label: 'Ordens', url: 'ordens'},
-      {label: 'Ativos', url: 'ativos'},
-    ];
-    this.navLinks = [
-      {
-        label: 'Ordens',
-        link: '/ordens'
-      },{
-        label: 'Ativos',
-        link: '/ativos'
-      }
+      {label: 'Ordens', routerLink: 'ordens'},
+      {label: 'Ativos', routerLink: 'ativos'},
     ];
    }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

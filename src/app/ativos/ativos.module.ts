@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AtivosRoutingModule } from './ativos-routing.module';
-import { AtivosComponent } from './ativos/ativos.component';
-
+import { AtivosComponent } from './cadastro-ativos/ativos.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
@@ -11,7 +13,10 @@ import { AtivosComponent } from './ativos/ativos.component';
   ],
   imports: [
     CommonModule,
-    AtivosRoutingModule
+    AtivosRoutingModule,
+    InputTextModule,
+    InputNumberModule,
+    DropdownModule
   ]
 })
 export class AtivosModule { }

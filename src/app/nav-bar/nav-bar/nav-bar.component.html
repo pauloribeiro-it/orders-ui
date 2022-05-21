@@ -1,6 +1,1 @@
-<p-tabView>
-  <p-tabPanel *ngFor="let link of navLinks" [routerLink]="link.link" [header]="link.label">
-      {{link.label}}
-  </p-tabPanel>
-
-</p-tabView>
+<p-tabMenu [model]="items" [activeItem]="items[0]"></p-tabMenu>
