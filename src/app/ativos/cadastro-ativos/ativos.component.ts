@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AtivosService } from '../ativos.service';
+import { Ativo } from '../ativos/Ativo';
 import { TipoAtivo } from './TipoAtivo';
 @Component({
   selector: 'app-ativos',
@@ -13,9 +14,9 @@ export class AtivosComponent implements OnInit {
 
   constructor(private ativosService: AtivosService, private formBuilder: FormBuilder) {
     this.formulario = this.formBuilder.group({
-      codigo: [null, Validators.required],
-      tipo: [null, Validators.required],
-      descricao: [null, Validators.required]
+      codigoAtivo: [null, Validators.required],
+      idTipoAtivo: [null, Validators.required],
+      descricaoAtivo: [null, Validators.required]
     });
   }
 
@@ -28,7 +29,10 @@ export class AtivosComponent implements OnInit {
   }
 
   salvar(): void{
-
+    this.ativosService.salvar(this.formulario.value)
+                      .then((ativo) => {
+                        console.log('Cadastro realizado');
+                      }).catch(erro => console.log(erro));
   }
 
 }

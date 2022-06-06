@@ -5,21 +5,21 @@
       <label for="codigo" class="col-fixed">Código</label>
       <div class="col">
         <input id="codigo" [maxLength]="6" type="text" pInputText class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary"
-               formControlName="codigo">
+               formControlName="codigoAtivo">
       </div>
     </div>
 
     <div class="field grid">
       <label class="col-fixed">Tipo</label>
       <p-dropdown [options]="tipos" optionLabel="descricao" optionValue="id" name="tipo"
-                  formControlName="tipo" placeholder="Selecione">
+                  formControlName="idTipoAtivo" placeholder="Selecione">
       </p-dropdown>
     </div>
 
     <div class="field grid">
       <label class="col-fixed" style="padding-bottom:80px">Descrição</label>
       <div class="col">
-        <textarea [rows]="5" [cols]="30" pInputTextarea autoResize="false" formControlName="descricao"></textarea>
+        <textarea [rows]="5" [cols]="30" pInputTextarea autoResize="false" formControlName="descricaoAtivo"></textarea>
       </div>
     </div>
 
