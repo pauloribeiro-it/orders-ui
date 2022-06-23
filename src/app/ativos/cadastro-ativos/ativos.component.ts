@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AtivosService } from '../ativos.service';
-import { Ativo } from '../ativos/Ativo';
-import { TipoAtivo } from './TipoAtivo';
+import { TipoAtivo } from '../../core/model/TipoAtivo';
 @Component({
   selector: 'app-ativos',
   templateUrl: './ativos.component.html',

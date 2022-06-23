@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { OrdensComponent } from './ordens/ordens.component';
+import { CadastroOrdensComponent } from './cadastro-ordens/cadastro-ordens.component';
 
 const routes: Routes = [
-  {path: '', component: OrdensComponent}
+  {path: '', component: CadastroOrdensComponent}
 ];
 
 @NgModule({

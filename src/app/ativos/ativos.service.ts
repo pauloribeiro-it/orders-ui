@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { Ativo } from './ativos/Ativo';
+import { Ativo } from '../core/model/Ativo';
 @Injectable({
   providedIn: 'root'
 })
@@ -21,5 +21,11 @@ export class AtivosService {
 
   salvar(ativo: Ativo): Promise<any>{
     return this.http.post(this.urlAtivos, ativo).toPromise();
+  }
+
+  getAtivos(): Promise<any>{
+    return this.http.get(`${this.urlAtivos}/all`)
+                    .toPromise()
+                    .then(resposta => resposta);
   }
 }
