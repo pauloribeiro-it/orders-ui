@@ -17,7 +17,8 @@ export class CadastroOrdensComponent implements OnInit {
               private formBuilder: FormBuilder) {
     this.formulario = this.formBuilder.group({
         preco: [null, Validators.required],
-        quantidade: [null, Validators.required]
+        quantidade: [null, Validators.required],
+        dataOrdem: [null, Validators.required]
     });
   }
 

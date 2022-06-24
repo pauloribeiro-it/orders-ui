@@ -1,5 +1,5 @@
 <div class="card">
-  <form autocomplete="off">
+  <form autocomplete="off" [formGroup]="formulario">
     <br>
     <div class="field grid">
       <label for="preco" class="col-fixed">Preço</label>
@@ -15,6 +15,16 @@
         <p-inputNumber formControlName="quantidade"></p-inputNumber>
       </div>
     </div>
+
+    <div class="field grid">
+      <label for="dataOrdem" class="col-fixed">
+          Data da ordem
+      </label>
+      <div class="col">
+        <p-calendar formControlName="dataOrdem" dateFormat="dd/mm/yy"></p-calendar>
+      </div>
+    </div>
+
   </form>
 
 </div>
