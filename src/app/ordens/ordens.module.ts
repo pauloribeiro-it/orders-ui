@@ -5,6 +5,8 @@ import { OrdensRoutingModule } from './ordens-routing.module';
 import { CadastroOrdensComponent } from './cadastro-ordens/cadastro-ordens.component';
 import {InputNumberModule} from 'primeng/inputnumber';
 import {CalendarModule} from 'primeng/calendar';
+import { DropdownModule } from 'primeng/dropdown';
+import {ToastModule} from 'primeng/toast';
 @NgModule({
   declarations: [
     CadastroOrdensComponent
@@ -15,7 +17,9 @@ import {CalendarModule} from 'primeng/calendar';
     InputNumberModule,
     FormsModule,
     ReactiveFormsModule,
-    CalendarModule
+    CalendarModule,
+    DropdownModule,
+    ToastModule
   ]
 })
 export class OrdensModule { }
