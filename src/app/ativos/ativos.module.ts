@@ -7,6 +7,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
+import { ToastModule } from 'primeng/toast';
 @NgModule({
   declarations: [
     AtivosComponent
@@ -19,7 +20,8 @@ import { ButtonModule } from 'primeng/button';
     DropdownModule,
     ButtonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastModule
   ]
 })
 export class AtivosModule { }

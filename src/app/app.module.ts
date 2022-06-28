@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { NavBarModule } from './nav-bar/nav-bar.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MessageService } from 'primeng/api';
+import { ToastModule } from 'primeng/toast';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,9 +16,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     NavBarModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ToastModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

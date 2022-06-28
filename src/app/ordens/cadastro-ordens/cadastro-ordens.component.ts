@@ -9,7 +9,8 @@ import { OrdemService } from '../ordem.service';
 @Component({
   selector: 'app-cadastro-ordens',
   templateUrl: './cadastro-ordens.component.html',
-  styleUrls: ['./cadastro-ordens.component.css']
+  styleUrls: ['./cadastro-ordens.component.css'],
+  providers: [MessageService]
 })
 export class CadastroOrdensComponent implements OnInit {
 
@@ -19,7 +20,8 @@ export class CadastroOrdensComponent implements OnInit {
   constructor(private ativoService:AtivosService,
               private formBuilder: FormBuilder,
               private ordemService: OrdemService,
-              private messageService: MessageService) {
+              private messageService: MessageService
+              ) {
     this.formulario = this.formBuilder.group({
         preco: [null, Validators.required],
         quantidade: [null, Validators.required],
