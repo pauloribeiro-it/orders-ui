@@ -28,4 +28,9 @@ export class AtivosService {
                     .toPromise()
                     .then(resposta => resposta);
   }
+
+  excluiAtivo(idAtivo: Number): Promise<any>{
+    return this.http.delete(`${this.urlAtivos}/${idAtivo}`)
+                    .toPromise();
+  }
 }

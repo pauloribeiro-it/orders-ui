@@ -28,4 +28,24 @@
     </div>
   </form>
   <p-toast></p-toast>
+  <p-table [value]="ativos" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+        <tr>
+          <th>Código</th>
+          <th>Descrição</th>
+          <th>Ações</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-ativo>
+      <tr>
+          <td>{{ativo.codigoAtivo}}</td>
+          <td>{{ativo.descricaoAtivo}}</td>
+          <td class="col-acoes">
+            <button pButton icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="top"
+            (click)="confirmarExclusao(ativo)"></button>
+          </td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
 </div>

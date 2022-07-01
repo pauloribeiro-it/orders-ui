@@ -32,7 +32,7 @@ export class CadastroOrdensComponent implements OnInit {
 
   ngOnInit(): void {
     this.ativoService.getAtivos().then(resposta => {
-        this.ativos = resposta.map((r: Ativo) => new Ativo(r.codigoAtivo, r.idTipoAtivo, r.descricaoAtivo));
+        this.ativos = resposta.map((r: Ativo) => new Ativo(r.codigoAtivo,r.idAtivo, r.idTipoAtivo, r.descricaoAtivo));
     });
   }
 

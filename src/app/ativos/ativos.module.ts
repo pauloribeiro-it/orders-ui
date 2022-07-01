@@ -8,6 +8,10 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
+import {TableModule} from 'primeng/table';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {ConfirmationService} from 'primeng/api';
+
 @NgModule({
   declarations: [
     AtivosComponent
@@ -21,7 +25,9 @@ import { ToastModule } from 'primeng/toast';
     ButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    ToastModule
+    ToastModule,
+    TableModule,
+    ConfirmDialogModule
   ]
 })
 export class AtivosModule { }
